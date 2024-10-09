@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from "./footer/footer.component";
+import { MaterialModule } from './material/material.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
-  selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-root',
+  templateUrl: 'app.component.html',  
+  imports: [RouterModule, HeaderComponent, FooterComponent , MaterialModule ,MatFormFieldModule,MatInputModule, MatSelectModule]
+ 
 })
-export class AppComponent {
-  title = 'standalone-app';
-}
+export class AppComponent { }
